@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "91492fe9-9a27-4ba2-896d-87e76cdf5f82",
+		"name": "Testes ANS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50419951",
+		"_collection_link": "https://jefferson-4160-5895314.postman.co/workspace/Jefferson-Silva's-Workspace~a5b96714-8353-4937-83e4-b3f6b6e8aa1c/collection/50419951-91492fe9-9a27-4ba2-896d-87e76cdf5f82?action=share&source=collection_link&creator=50419951"
+	},
+	"item": [
+		{
+			"name": "Busca sucesso",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/buscar?termoBusca=unimed",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "termoBusca",
+							"value": "unimed"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca inexistente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/buscar?termoBusca=asdf",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "termoBusca",
+							"value": "asdf"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca vazia",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/buscar?termoBusca=",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "termoBusca",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
